@@ -1,0 +1,43 @@
+@startuml
+' https://github.com/awslabs/aws-icons-for-plantuml/blob/main/AWSSymbols.md
+
+hide stereotype
+skinparam linetype ortho
+!include <awslib/AWSCommon>
+!include <awslib/AWSSimplified>
+' !include <awslib/Analytics/all>
+' !include <awslib/ApplicationIntegration/all>
+' !include <awslib/Blockchain/all>
+' !include <awslib/BusinessApplications/all>
+' !include <awslib/CloudFinancialManagement/all>
+!include <awslib/Compute/all>
+' !include <awslib/ContactCenter/all>
+' !include <awslib/Containers/all>
+' !include <awslib/CustomerEnablement/all>
+!include <awslib/Database/all>
+' !include <awslib/DeveloperTools/all>
+' !include <awslib/EndUserComputing/all>
+' !include <awslib/FrontEndWebMobile/all>
+' !include <awslib/Games/all>
+' !include <awslib/General/all>
+!include <awslib/Groups/all>
+!include <awslib/InternetOfThings/all>
+' !include <awslib/MachineLearning/all>
+' !include <awslib/ManagementGovernance/all>
+' !include <awslib/MediaServices/all>
+' !include <awslib/MigrationTransfer/all>
+' !include <awslib/NetworkingContentDelivery/all>
+' !include <awslib/QuantumTechnologies/all>
+' !include <awslib/Robotics/all>
+' !include <awslib/Satellite/all>
+!include <awslib/SecurityIdentityCompliance/all>
+' !include <awslib/Serverless/all>
+!include <awslib/Storage/all>
+
+!define S3(s3_alias,s3_label) SimpleStorageServiceBucket(s3_alias,s3_label,"")
+!define S3(s3_alias) SimpleStorageServiceBucket(s3_alias,s3_alias,"")
+!define Lambda(alias,label) LambdaLambdaFunction(alias,label,"")
+!define Lambda(alias) LambdaLambdaFunction(alias,alias, "")
+!define DynamoDB(alias, label) DynamoDB(alias,label,"")
+!define DynamoDB(alias) DynamoDB(alias,alias,"")
+@enduml

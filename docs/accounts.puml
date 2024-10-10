@@ -1,0 +1,13 @@
+@startuml MyDiagram
+
+!include lib/aws.puml
+GenericGroup(service, "sensor-metrics-service") {
+
+  S3(s3, DebugDataBucket)
+  Lambda(lambda,DecodeDebugData)
+  DynamoDBTable(dyn, "Debug Data Ta∂ble", "traceId", "e_descr")
+  lambda -> dyn 
+  dyn -> s3
+  
+}
+@enduml
